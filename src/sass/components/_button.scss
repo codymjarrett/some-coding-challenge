@@ -1,0 +1,16 @@
+.button {
+    background-color: $site-green;
+    color: $site-white;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 1rem;
+    
+    &:hover{
+        background-color: $site-blue;
+        
+    }
+}

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    class="layout"
+  >
+    <header
+      class="header"
+    >
+      <div
+        class="header__wrapper"
+      >
+        <h1
+          class="header__title"
+        >
+          <a
+            class="header__link"
+            href="/"
+          >
+            San Fran Movie Fun
+          </a>
+        </h1>
+      </div>
+    </header>
+  </div>
+</DocumentFragment>
+`;

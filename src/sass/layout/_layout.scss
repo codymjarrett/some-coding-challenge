@@ -1,0 +1,12 @@
+.layout {
+    padding: 1rem;
+}
+
+.main-wrapper{
+    max-width: 90%;
+    margin: auto;
+
+    @media(min-width: $screen-tablet){
+        max-width: 50%;
+    }
+}

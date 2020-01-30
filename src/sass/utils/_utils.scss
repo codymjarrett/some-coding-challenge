@@ -1,0 +1,58 @@
+.detail-highlight {
+    background-color: $site-green;
+    color: $site-white;
+    padding: .475rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.arrow,
+.checklist {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: .775rem;
+
+    a {
+        color: $site-orange;
+        text-decoration: none;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+.checklist {
+    background-color: $site-white;
+    padding: .5rem 1rem;
+
+    &:hover {
+        background-color: $site-neutral;
+    }
+}
+
+.checklist-position {
+    display: block;
+    margin-left: auto;
+    margin-top: 1rem;
+}
+
+.left-arrow {
+    font-size: 1.2rem
+}
+
+.select-wrapper {
+    select {
+        width: 10rem;
+        margin-top: .475rem;
+    }
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    font-size: 2rem;
+}

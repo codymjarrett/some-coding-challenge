@@ -1,0 +1,54 @@
+.card {
+    margin-top: 2rem;
+    border: 4px solid $site-blue;
+    border-radius: 10px;
+    padding: 1rem;
+
+
+    &__title {
+        font-size: 1.2rem;
+        color: $site-white;
+        padding: 1rem 2rem;
+        background-color: $site-blue;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__detail {
+        text-align: center;
+    }
+}
+
+.topCard {
+    margin-top: 2rem;
+
+    &__content {
+        margin-bottom: 1rem;
+    }
+    &__detail {
+        margin-top: 1rem;
+
+    }
+}
+
+
+.leftCard {
+    margin-top: 1rem;
+
+    &__content {
+        margin-top: 1rem;
+    }
+    &__detail{
+        margin-top: 1rem;
+    }
+}
+
+.rightCard {
+    margin-top: 1rem;
+
+    &__detail{
+        margin-top: 1rem;
+    }
+}
