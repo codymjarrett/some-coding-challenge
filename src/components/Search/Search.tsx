@@ -2,10 +2,11 @@ import React, { useContext, useState, ChangeEvent, MouseEvent } from 'react'
 import { PARTIAL_MATCH, RESET } from '../../constants'
 import { MovieContext } from '../../context/context'
 import movieDataService from '../../services/movieDataService'
+import { MovieValueInterface } from '../../context/context'
 
 const Search: React.FC = () => {
-	const { dispatch } = useContext(MovieContext)
-	const [input, setInput] = useState('')
+	const { dispatch } = useContext<MovieValueInterface>(MovieContext)
+	const [input, setInput] = useState<string>('')
 
 	const handleOnChange = (ev: ChangeEvent<HTMLInputElement>): void => {
 		let substring = ev.currentTarget.value.toLowerCase()

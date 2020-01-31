@@ -12,7 +12,7 @@ const Home: React.FC = () => {
 
 	useEffect(() => {}, [state])
 
-	const sortMovies: Function = (option: string): void => {
+	const sortMovies = (option: string): void => {
 		if (option === 'ASC') {
 			dispatch({
 				type: ASCEND,

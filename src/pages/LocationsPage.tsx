@@ -1,16 +1,13 @@
 import React, { useContext } from 'react'
 import Layout from '../components/Layout/Layout'
-import { Link } from 'react-router-dom'
-
+import { Link, RouteComponentProps } from 'react-router-dom'
 import { MovieContext } from '../context/context'
 
-interface ChildrenProps {
-	// change type
-	match: any
-}
-const LocationsPage: React.FC<ChildrenProps> = ({ match }) => {
-	const { state } = useContext(MovieContext)
+type TParams = { pageId: string }
 
+const LocationsPage = ({ match }: RouteComponentProps<TParams>) => {
+	const { state } = useContext(MovieContext)
+	
 	const {
 		params: { pageId },
 	} = match

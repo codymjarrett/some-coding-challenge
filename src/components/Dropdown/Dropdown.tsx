@@ -1,9 +1,9 @@
 import React, { ChangeEvent } from 'react'
 
-export interface DropdownProps {
-	// change type
-	sortMovies: any
+type DropdownProps = {
+	sortMovies: (option: string) => void
 }
+
 const Dropdown: React.FC<DropdownProps> = ({ sortMovies }) => {
 	return (
 		<div className="dropdown">

@@ -2,19 +2,14 @@ import React, { createContext, useEffect, useReducer } from 'react'
 import movieDataService from '../services/movieDataService'
 import { SET_INITIAL_STATE } from '../constants'
 
-interface ChildrenProps {
-	//change type
-	children: any
-}
 
 // come back to this!!!
-interface MovieValue {
-	//change type
+export interface MovieValueInterface {
 	state: any
 	dispatch: any
 }
 
-const fetchMovieService: Function = ():any => {
+const fetchMovieService: Function = (): any => {
 	return movieDataService.get()
 }
 
@@ -23,50 +18,57 @@ const initialState = {
 }
 
 //change type
-const getInitialState: Function = (dispatch:any):void => {
+const getInitialState: Function = (dispatch: any): void => {
 	const initialState = fetchMovieService()
-		initialState.then((data:[]) => {
-			if (Array.isArray(data)) {
-				dispatch({
-					type: SET_INITIAL_STATE,
-					payload: data,
-				})
-			} else {
-				dispatch({
-					type: SET_INITIAL_STATE,
-					payload: 'error',
-				})
-			}
-		})
+	initialState.then((data: []) => {
+		if (Array.isArray(data)) {
+			dispatch({
+				type: SET_INITIAL_STATE,
+				payload: data,
+			})
+		} else {
+			dispatch({
+				type: SET_INITIAL_STATE,
+				payload: 'error',
+			})
+		}
+	})
 }
 
-// change type
 const reducer = (state: any, action: any) => {
-	
-	//change all these types 
 	switch (action.type) {
 		case 'SET_INITIAL_STATE':
-			return action.payload;
+			return action.payload
 		case 'PARTIAL_MATCH':
-			return state.slice(0).filter((movie:any) => movie.title.toLowerCase().includes(action.substring))
+			return state
+				.slice(0)
+				.filter((movie: any) =>
+					movie.title.toLowerCase().includes(action.substring)
+				)
 		case 'DESCEND':
-			return state.slice(0).sort(
-				(a: any, b: any) => parseInt(b.release_year) - parseInt(a.release_year)
-			);
+			return state
+				.slice(0)
+				.sort(
+					(a: any, b: any) =>
+						parseInt(b.release_year) - parseInt(a.release_year)
+				)
 		case 'ASCEND':
-			return state.slice(0).sort(
-				(a: any, b: any) => parseInt(a.release_year) - parseInt(b.release_year)
-			);
+			return state
+				.slice(0)
+				.sort(
+					(a: any, b: any) =>
+						parseInt(a.release_year) - parseInt(b.release_year)
+				)
 		case 'RESET':
-			return action.payload;
+			return action.payload
 		default:
 			return state
 	}
 }
 
-export const MovieContext = createContext({} as MovieValue)
+export const MovieContext = createContext({} as MovieValueInterface)
 
-const MovieProvider: React.FC<ChildrenProps> = ({ children }) => {
+const MovieProvider: React.FC = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, initialState)
 
 	useEffect(() => {

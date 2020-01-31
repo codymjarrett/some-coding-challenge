@@ -1,7 +1,7 @@
 import React from 'react'
 
 export interface LeftCardInputProps {
-		// change type
+	// change type
 	movie: any
 }
 
