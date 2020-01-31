@@ -7,7 +7,7 @@ const Search: React.FC = () => {
 	const { dispatch } = useContext(MovieContext)
 	const [input, setInput] = useState('')
 
-	const handleOnChange = (ev: ChangeEvent<HTMLInputElement>) => {
+	const handleOnChange = (ev: ChangeEvent<HTMLInputElement>): void => {
 		let substring = ev.currentTarget.value.toLowerCase()
 		setInput(substring)
 	}
@@ -19,17 +19,17 @@ const Search: React.FC = () => {
 		})
 		setInput('')
 	}
-	const handleReset = (ev: MouseEvent) => {
+	const handleReset = (ev: MouseEvent): void => {
 		resetState()
 	}
 
-	const fetchMovieService = () => {
+	const fetchMovieService = (): any => {
 		return movieDataService.get()
 	}
 
-	const resetState = () => {
+	const resetState = (): void => {
 		const initialState = fetchMovieService()
-		initialState.then(data => {
+		initialState.then((data: []) => {
 			setInput('')
 			if (Array.isArray(data)) {
 				dispatch({

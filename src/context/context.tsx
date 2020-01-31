@@ -3,16 +3,18 @@ import movieDataService from '../services/movieDataService'
 import { SET_INITIAL_STATE } from '../constants'
 
 interface ChildrenProps {
+	//change type
 	children: any
 }
 
 // come back to this!!!
 interface MovieValue {
+	//change type
 	state: any
 	dispatch: any
 }
 
-const fetchMovieService = () => {
+const fetchMovieService: Function = ():any => {
 	return movieDataService.get()
 }
 
@@ -20,9 +22,10 @@ const initialState = {
 	data: null,
 }
 
-const getInitialState = (dispatch:any) => {
+//change type
+const getInitialState: Function = (dispatch:any):void => {
 	const initialState = fetchMovieService()
-		initialState.then(data => {
+		initialState.then((data:[]) => {
 			if (Array.isArray(data)) {
 				dispatch({
 					type: SET_INITIAL_STATE,
@@ -37,8 +40,10 @@ const getInitialState = (dispatch:any) => {
 		})
 }
 
+// change type
 const reducer = (state: any, action: any) => {
 	
+	//change all these types 
 	switch (action.type) {
 		case 'SET_INITIAL_STATE':
 			return action.payload;
@@ -66,7 +71,6 @@ const MovieProvider: React.FC<ChildrenProps> = ({ children }) => {
 
 	useEffect(() => {
 		getInitialState(dispatch)
-		
 	}, [])
 
 	return (

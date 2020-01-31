@@ -1,9 +1,10 @@
 import React, { ChangeEvent } from 'react'
 
 export interface DropdownProps {
+	// change type
 	sortMovies: any
 }
-const Dropdown: React.SFC<DropdownProps> = ({ sortMovies }) => {
+const Dropdown: React.FC<DropdownProps> = ({ sortMovies }) => {
 	return (
 		<div className="dropdown">
 			<div className="dropdown__content">

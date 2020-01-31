@@ -1,4 +1,4 @@
-export const mockData = () => {
+export const mockData: Function = (): {} => {
 	return {
 		title: "Alexander's Ragtime Band",
 		release_year: '1938',

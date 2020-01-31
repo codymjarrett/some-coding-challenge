@@ -1,10 +1,12 @@
 import React from 'react'
 
 export interface RightCardInputProps {
+	// change type
+
 	movie: any
 }
 
-const RightCard: React.SFC<RightCardInputProps> = ({ movie }) => (
+const RightCard: React.FC<RightCardInputProps> = ({ movie }) => (
 	<div className="rightCard">
 		<p className="detail-highlight">
 			Location{movie.locations.length > 1 ? 's' : ''}

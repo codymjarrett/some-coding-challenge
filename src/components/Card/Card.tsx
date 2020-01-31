@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Types from '../../types'
 import TopCard from '../TopCard/TopCard'
 import LeftCard from '../LeftCard/LeftCard'
 import RightCard from '../RightCard/RightCard'
@@ -10,7 +9,7 @@ export interface CardInputProps {
 	id: number
 }
 
-const Card: React.SFC<CardInputProps> = ({ movie, id }) => {
+const Card: React.FC<CardInputProps> = ({ movie, id }) => {
 	useEffect(() => {}, [movie])
 	return (
 		<div className="card">

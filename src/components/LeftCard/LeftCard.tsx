@@ -1,10 +1,11 @@
 import React from 'react'
 
 export interface LeftCardInputProps {
+		// change type
 	movie: any
 }
 
-const LeftCard: React.SFC<LeftCardInputProps> = ({ movie }) => (
+const LeftCard: React.FC<LeftCardInputProps> = ({ movie }) => (
 	<div className="leftCard">
 		{movie.actors.length > 0 ? (
 			<div className="leftCard__content">

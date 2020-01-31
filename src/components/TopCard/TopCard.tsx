@@ -1,10 +1,11 @@
 import React from 'react'
 
 export interface TopCardInputProps {
+	// change type
 	movie: any
 }
 
-const TopCard: React.SFC<TopCardInputProps> = ({ movie }) => (
+const TopCard: React.FC<TopCardInputProps> = ({ movie }) => (
 	<div className="topCard">
 		{movie.fun_facts ? (
 			<div className="topCard__content">

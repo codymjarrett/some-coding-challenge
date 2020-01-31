@@ -1,5 +1,7 @@
 .header {
-
+    &__wrapper {
+        padding: 1rem;
+    }
 
     &__title {
         display: inline-block;
@@ -8,12 +10,12 @@
         padding: 1rem;
         font-family: 'Bowlby One SC', cursive;
         transform: skew(0deg, -5deg);
-        
+
         a {
             text-decoration: none;
             color: $site-neutral;
             vertical-align: middle;
-            letter-spacing: 2px;
+            letter-spacing: .125rem;
         }
     }
 }

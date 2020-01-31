@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, ChangeEvent } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { DESCEND, ASCEND } from '../constants'
 import Layout from '../components/Layout/Layout'
 import Card from '../components/Card/Card'
@@ -7,32 +7,47 @@ import Search from '../components/Search/Search'
 
 import { MovieContext } from '../context/context'
 
-const Home: React.SFC = () => {
+const Home: React.FC = () => {
 	const { state, dispatch } = useContext(MovieContext)
 
 	useEffect(() => {}, [state])
 
-	const sortMovies = (ev: string) => {
-		if (ev === 'ASC') {
+	const sortMovies: Function = (option: string): void => {
+		if (option === 'ASC') {
 			dispatch({
 				type: ASCEND,
 			})
-		} else if (ev === 'DSC') {
+		} else if (option === 'DSC') {
 			dispatch({
 				type: DESCEND,
 			})
 		}
 	}
 
-	let content
+	let content: any
+
 	if (state === 'error') {
-		content = <div>error</div>
+		content = (
+			<div className="error">
+				<span
+					role="img"
+					aria-label="crying face emoji"
+					className="crying-face-emoji emoji"
+				>
+					😩
+				</span>
+				<p className="error__message">
+					Welp! Looks like your vacay is ruined...
+				</p>
+			</div>
+		)
 	} else if (state.length > 0) {
+		//change type
 		content = state.map((movie: any, index: number) => (
 			<Card key={index} id={index} movie={movie} />
 		))
 	} else {
-		content = <div>Loading...</div>
+		content = <div className="loading">LOADING...</div>
 	}
 
 	return (

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { MovieContext } from '../context/context'
 
 interface ChildrenProps {
+	// change type
 	match: any
 }
 const LocationsPage: React.FC<ChildrenProps> = ({ match }) => {
@@ -56,19 +57,5 @@ const LocationsPage: React.FC<ChildrenProps> = ({ match }) => {
 		</Layout>
 	)
 }
-// export interface LocationItemProps {
-//     complete?: boolean,
-//     location: string,
-// }
-
-// const LocationItem: React.FC<LocationItemProps> = ({ location, complete}) => {
-
-//     return(
-//         <li data-complete={complete}>
-//             <div></div>
-//             <p>{location}</p>
-//         </li>
-//     )
-// }
 
 export default LocationsPage

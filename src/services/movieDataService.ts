@@ -15,6 +15,13 @@ interface MovieDataServiceResponseInterface {
 }
 class MovieDataService {
 	// https://dev.socrata.com/foundry/data.sfgov.org/yitu-d5am
+
+	handleErrorResponse(response: any) {
+		if (!response.ok) {
+			throw Error(response.statusText)
+		}
+		return response
+	}
 	async get() {
 		return await fetch(
 			'https://data.sfgov.org/resource/yitu-d5am.json?$limit=100',
@@ -22,6 +29,7 @@ class MovieDataService {
 				headers: { 'X-App-Token': 'BOEjdyaAE7igQWstbEO1Nc72T' },
 			}
 		)
+			.then(this.handleErrorResponse)
 			.then(response => response.json())
 			.then(data => {
 				const movies: Record<string, Types.MovieInterface> = {}
@@ -41,9 +49,7 @@ class MovieDataService {
 				})
 				return Object.values(movies)
 			})
-			.catch(error => {
-				return error
-			})
+			.catch(error => error)
 	}
 }
 
