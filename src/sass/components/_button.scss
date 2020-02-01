@@ -1,5 +1,5 @@
 .button {
-    background-color: $site-green;
+    background-color: $site-dark-blue;
     color: $site-white;
     border: none;
     border-radius: .3125rem;
@@ -8,9 +8,11 @@
     font-weight: bold;
     font-size: 1rem;
     margin-right: 1rem;
+    transition: opacity ease .3s;
     
     &:hover{
-        background-color: $site-blue;
+        opacity: .675;
+        
         
     }
 }

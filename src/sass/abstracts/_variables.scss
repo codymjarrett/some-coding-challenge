@@ -1,7 +1,7 @@
-$site-neutral: #f9f8eb;
+$site-neutral: #eeeeee;
 $site-green: #76b39d;
-$site-blue: #05004e;
-$site-orange: #fd5f00;
+$site-dark-blue: #05004e;
+$site-blue: #1089ff;
 
 $site-white: #fff;
 
@@ -10,4 +10,4 @@ $screen-mobile: 30em;
 $screen-tablet: 48em;
 $screen-desktop: 64em;
 
-$site-primary-gradient: linear-gradient(-30deg, $site-green 38%, $site-blue 60%);
+$site-primary-gradient: linear-gradient(-30deg, $site-green 38%, $site-dark-blue 60%);

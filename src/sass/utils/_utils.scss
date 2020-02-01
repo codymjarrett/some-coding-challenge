@@ -15,7 +15,7 @@
     font-size: .775rem;
 
     a {
-        color: $site-orange;
+        color: $site-dark-blue;
         text-decoration: none;
 
         span {
@@ -27,6 +27,7 @@
 .checklist {
     background-color: $site-white;
     padding: .5rem 1rem;
+    transition: all ease .3s;
 
     &:hover {
         background-color: $site-neutral;
