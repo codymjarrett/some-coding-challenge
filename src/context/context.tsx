@@ -2,8 +2,6 @@ import React, { createContext, useEffect, useReducer } from 'react'
 import movieDataService from '../services/movieDataService'
 import { SET_INITIAL_STATE } from '../constants'
 
-
-
 export interface MovieValueInterface {
 	state: any
 	dispatch: any
@@ -35,30 +33,12 @@ const getInitialState: Function = (dispatch: any): void => {
 	})
 }
 
-const reFetchData =  async (value:any) =>{
-	// let result;
-	const res = await movieDataService.get()
-	return res
-	
-	// return newState.then((r:any) => r)
-	// newState.then((r:any) => {
-	// 	result = r;
-	// })
-	
-		// return result
-}
-
 const reducer = (state: any, action: any) => {
 	switch (action.type) {
 		case 'SET_INITIAL_STATE':
 			return action.payload
 		case 'PARTIAL_MATCH':
-			return reFetchData(action);
-			// return state
-			// 	.slice(0)
-			// 	.filter((movie: any) =>
-			// 		movie.title.toLowerCase().includes(action.substring)
-			// 	)
+			return action.payload
 		case 'DESCEND':
 			return state
 				.slice(0)

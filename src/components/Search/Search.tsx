@@ -13,13 +13,6 @@ const Search: React.FC = () => {
 		setInput(substring)
 	}
 
-	const handleSearch = (ev: MouseEvent) => {
-		dispatch({
-			type: PARTIAL_MATCH,
-			substring: input,
-		})
-		setInput('')
-	}
 	const handleReset = (ev: MouseEvent): void => {
 		resetState()
 	}
@@ -36,6 +29,22 @@ const Search: React.FC = () => {
 				dispatch({
 					type: RESET,
 					payload: data,
+				})
+			}
+		})
+	}
+
+	const handleSearch = (ev: MouseEvent): void => {
+		const initialState = fetchMovieService()
+		initialState.then((data: []) => {
+			setInput('')
+			if (Array.isArray(data)) {
+				const filteredSearch = data
+					.slice(0)
+					.filter((movie: any) => movie.title.toLowerCase().includes(input))
+				dispatch({
+					type: PARTIAL_MATCH,
+					payload: filteredSearch,
 				})
 			}
 		})
