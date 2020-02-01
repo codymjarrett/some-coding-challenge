@@ -16,10 +16,22 @@ const Home: React.FC = () => {
 		if (option === 'ASC') {
 			dispatch({
 				type: ASCEND,
+				payload: state
+					.slice(0)
+					.sort(
+						(a: any, b: any) =>
+							Number(a.release_year) - Number(b.release_year)
+					),
 			})
 		} else if (option === 'DSC') {
 			dispatch({
 				type: DESCEND,
+				payload: state
+					.slice(0)
+					.sort(
+						(a: any, b: any) =>
+							Number(b.release_year) - Number(a.release_year)
+					),
 			})
 		}
 	}
@@ -42,10 +54,19 @@ const Home: React.FC = () => {
 			</div>
 		)
 	} else if (state.length > 0) {
-		//change type
 		content = state.map((movie: any, index: number) => (
 			<Card key={index} id={index} movie={movie} />
 		))
+	} else if (state.length === 0) {
+		content = (
+			<div className="no-data">
+				<span role="img" aria-label="poop emoji" className="poop-emoji emoji">
+					💩
+				</span>
+				<p className="no-data__message">Sorry, that's not a thing.</p>
+				<p className="no-data__message">Try again!</p>
+			</div>
+		)
 	} else {
 		content = <div className="loading">LOADING...</div>
 	}

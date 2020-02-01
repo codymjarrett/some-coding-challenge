@@ -9,13 +9,13 @@ export interface RightCardInputProps {
 const RightCard: React.FC<RightCardInputProps> = ({ movie }) => (
 	<div className="rightCard">
 		<p className="detail-highlight">
-			Location{movie.locations.length > 1 ? 's' : ''}
+			Location{movie.locations && movie.locations.length > 1 ? 's' : ''}
 		</p>
-		{movie.locations.length > 0 ? (
+		{movie.locations && movie.locations.length > 0 ? (
 			<ul>
 				{movie.locations.map((loc: any, index: number) => (
 					<li className="rightCard__detail" key={index}>
-						{loc}
+						<div>{ index + 1 }. { loc }</div>
 					</li>
 				))}
 			</ul>

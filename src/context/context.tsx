@@ -15,7 +15,6 @@ const initialState = {
 	data: null,
 }
 
-//change type
 const getInitialState: Function = (dispatch: any): void => {
 	const initialState = fetchMovieService()
 	initialState.then((data: []) => {
@@ -40,19 +39,9 @@ const reducer = (state: any, action: any) => {
 		case 'PARTIAL_MATCH':
 			return action.payload
 		case 'DESCEND':
-			return state
-				.slice(0)
-				.sort(
-					(a: any, b: any) =>
-						parseInt(b.release_year) - parseInt(a.release_year)
-				)
+			return action.payload
 		case 'ASCEND':
-			return state
-				.slice(0)
-				.sort(
-					(a: any, b: any) =>
-						parseInt(a.release_year) - parseInt(b.release_year)
-				)
+			return action.payload
 		case 'RESET':
 			return action.payload
 		default:

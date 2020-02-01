@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <div
+    class="card"
+  >
+    <div
+      class="card__wrapper"
+    >
+      <div
+        class="card__title-wrapper"
+      >
+        <h2
+          class="card__title"
+        />
+        <button
+          class="checklist checklist-position"
+        />
+      </div>
+      <div
+        class="card__detail"
+      >
+        <div
+          class="topCard"
+        />
+        <div
+          class="leftCard"
+        />
+        <div
+          class="rightCard"
+        >
+          <p
+            class="detail-highlight"
+          >
+            Location
+          </p>
+          <p
+            class="rightCard"
+          >
+            No disclosed Location
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

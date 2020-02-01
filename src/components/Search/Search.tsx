@@ -9,8 +9,7 @@ const Search: React.FC = () => {
 	const [input, setInput] = useState<string>('')
 
 	const handleOnChange = (ev: ChangeEvent<HTMLInputElement>): void => {
-		let substring = ev.currentTarget.value.toLowerCase()
-		setInput(substring)
+		setInput(ev.currentTarget.value.toLowerCase())
 	}
 
 	const handleReset = (ev: MouseEvent): void => {
@@ -22,8 +21,7 @@ const Search: React.FC = () => {
 	}
 
 	const resetState = (): void => {
-		const initialState = fetchMovieService()
-		initialState.then((data: []) => {
+		fetchMovieService().then((data: []) => {
 			setInput('')
 			if (Array.isArray(data)) {
 				dispatch({
@@ -35,8 +33,7 @@ const Search: React.FC = () => {
 	}
 
 	const handleSearch = (ev: MouseEvent): void => {
-		const initialState = fetchMovieService()
-		initialState.then((data: []) => {
+		fetchMovieService().then((data: []) => {
 			setInput('')
 			if (Array.isArray(data)) {
 				const filteredSearch = data

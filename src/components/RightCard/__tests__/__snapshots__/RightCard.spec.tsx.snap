@@ -14,12 +14,16 @@ exports[`renders 1`] = `
       <li
         class="rightCard__detail"
       >
-        Cliff House (1090 Point Lobos Avenue)
+        <div>
+          1. Cliff House (1090 Point Lobos Avenue)
+        </div>
       </li>
       <li
         class="rightCard__detail"
       >
-        The Walden House, Buena Vista Park
+        <div>
+          2. The Walden House, Buena Vista Park
+        </div>
       </li>
     </ul>
   </div>

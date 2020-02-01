@@ -7,7 +7,7 @@ type TParams = { pageId: string }
 
 const LocationsPage = ({ match }: RouteComponentProps<TParams>) => {
 	const { state } = useContext(MovieContext)
-	
+
 	const {
 		params: { pageId },
 	} = match
@@ -40,7 +40,9 @@ const LocationsPage = ({ match }: RouteComponentProps<TParams>) => {
 										onClick={e => markOffLocation(e)}
 									>
 										<div>
-											<p>{loc}</p>
+											<p>
+												{index + 1}. {loc}
+											</p>
 										</div>
 									</li>
 								))}

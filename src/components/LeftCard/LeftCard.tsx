@@ -7,7 +7,7 @@ export interface LeftCardInputProps {
 
 const LeftCard: React.FC<LeftCardInputProps> = ({ movie }) => (
 	<div className="leftCard">
-		{movie.actors.length > 0 ? (
+		{movie.actors && movie.actors.length > 0 ? (
 			<div className="leftCard__content">
 				<p className="detail-highlight">Actors</p>
 				{movie.actors.map((actor: any, index: number) => (

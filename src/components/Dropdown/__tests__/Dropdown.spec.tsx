@@ -5,8 +5,9 @@ import Dropdown from '../Dropdown'
 
 afterEach(cleanup);
 
+/* I'm not sure why this test is failing */
 it("renders", () => {
-  const { asFragment } = render(<Dropdown/>);
+  const { asFragment } = render(<Dropdown />);
   expect(asFragment()).toMatchSnapshot();
 });
 

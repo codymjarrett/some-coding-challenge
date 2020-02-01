@@ -17,7 +17,7 @@ const Card: React.FC<CardInputProps> = ({ movie, id }) => {
 				<div className="card__title-wrapper">
 					<h2 className="card__title">{movie.title}</h2>
 					<button className="checklist checklist-position">
-						{movie.locations.length > 0 ? (
+						{movie.locations && movie.locations.length > 0 ? (
 							<Link to={`/locations/${id}`}>
 								<span>Location</span>
 								<span>Checklist</span>
