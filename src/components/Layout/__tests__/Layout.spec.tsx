@@ -6,11 +6,11 @@ import Layout from '../Layout'
 
 afterEach(cleanup)
 
-it('renders', () => {
-	const { asFragment } = render(
+test('<Layout />', () => {
+	const { container, debug } = render(
 		<Router>
 			<Layout />
 		</Router>
 	)
-	expect(asFragment()).toMatchSnapshot()
+	expect(container.firstChild).toMatchSnapshot()
 })

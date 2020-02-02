@@ -16,7 +16,10 @@ const Card: React.FC<CardInputProps> = ({ movie, id }) => {
 			<div className="card__wrapper">
 				<div className="card__title-wrapper">
 					<h2 className="card__title">{movie.title}</h2>
-					<button aria-label="Go to locations page" className="checklist checklist-position">
+					<button
+						aria-label="Go to locations page"
+						className="checklist checklist-position"
+					>
 						{movie.locations && movie.locations.length > 0 ? (
 							<Link to={`/locations/${id}`}>
 								<span>Location</span>

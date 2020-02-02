@@ -1,13 +1,11 @@
-import React, { ChangeEvent, useContext } from 'react'
-import { MovieContext } from '../../context/context'
+import React, { ChangeEvent } from 'react'
 
 type DropdownProps = {
 	sortMovies: (option: string) => void
+	state: any
 }
 
-const Dropdown: React.FC<DropdownProps> = ({ sortMovies }) => {
-	const { state } = useContext(MovieContext)
-
+const Dropdown: React.FC<DropdownProps> = ({ state, sortMovies }) => {
 	let content: any
 
 	if (state === 'error' || (state.length && state.length < 1)) {

@@ -1,35 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders 1`] = `
-<DocumentFragment>
+exports[`<Search /> 1`] = `
+<div
+  class="search"
+>
   <div
-    class="search"
+    class="search__search-bar"
   >
-    <div
-      class="search__search-bar"
-    >
-      <input
-        placeholder="search for movie..."
-        type="text"
-        value=""
-      />
-    </div>
-    <div
-      class="search__buttons"
-    >
-      <button
-        class="search__button button"
-        type="button"
-      >
-        Search
-      </button>
-      <button
-        class="search__button button"
-        type="button"
-      >
-        Reset
-      </button>
-    </div>
+    <input
+      placeholder="search for movie..."
+      type="text"
+      value=""
+    />
   </div>
-</DocumentFragment>
+  <div
+    class="search__buttons"
+  >
+    <button
+      class="search__button button"
+      type="button"
+    >
+      Search
+    </button>
+    <button
+      class="search__button button"
+      type="button"
+    >
+      Reset
+    </button>
+  </div>
+</div>
 `;

@@ -75,7 +75,7 @@ const Home: React.FC = () => {
 		<Layout>
 			<div className="main-wrapper">
 				<Search />
-				<Dropdown sortMovies={sortMovies} />
+				<Dropdown state={state} sortMovies={sortMovies} />
 				{content}
 			</div>
 		</Layout>

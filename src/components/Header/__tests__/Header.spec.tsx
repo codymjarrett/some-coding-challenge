@@ -4,14 +4,13 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import Header from '../Header'
 
-
 afterEach(cleanup)
 
-it('renders', () => {
-	const { asFragment } = render(
+it('<Header />', () => {
+	const { container, debug } = render(
 		<Router>
 			<Header />
 		</Router>
 	)
-	expect(asFragment()).toMatchSnapshot()
+	expect(container.firstChild).toMatchSnapshot()
 })

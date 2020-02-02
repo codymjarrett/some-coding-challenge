@@ -1,13 +1,12 @@
 import React from 'react'
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup } from '@testing-library/react'
 import { mockData } from '../../../mock-data/mock-data'
 
 import RightCard from '../RightCard'
 
-afterEach(cleanup);
+afterEach(cleanup)
 
-it("renders", () => {
-  const { asFragment } = render(<RightCard movie={mockData()}/>);
-  expect(asFragment()).toMatchSnapshot();
-});
-
+it('<RightCard />', () => {
+	const { container, debug } = render(<RightCard movie={mockData()} />)
+	expect(container.firstChild).toMatchSnapshot()
+})

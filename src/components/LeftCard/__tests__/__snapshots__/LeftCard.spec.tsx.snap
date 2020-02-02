@@ -1,63 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders 1`] = `
-<DocumentFragment>
+exports[`<LeftCard/> 1`] = `
+<div
+  class="leftCard"
+>
   <div
-    class="leftCard"
+    class="leftCard__content"
   >
-    <div
-      class="leftCard__content"
+    <p
+      class="detail-highlight"
     >
-      <p
-        class="detail-highlight"
-      >
-        Actors
-      </p>
-      <p
-        class="leftCard__detail"
-      >
-        Tyrone Power
-      </p>
-      <p
-        class="leftCard__detail"
-      >
-        Alice Faye
-      </p>
-      <p
-        class="leftCard__detail"
-      >
-        Don Ameche
-      </p>
-    </div>
-    <div
-      class="leftCard__content"
+      Actors
+    </p>
+    <p
+      class="leftCard__detail"
     >
-      <p
-        class="detail-highlight"
-      >
-        Director
-      </p>
-      <p
-        class="leftCard__detail"
-      >
-        Henry King
-      </p>
-    </div>
-    <div
-      class="leftCard__content"
+      Tyrone Power
+    </p>
+    <p
+      class="leftCard__detail"
     >
-      <p
-        class="detail-highlight"
-      >
-        Writer
-      </p>
-      <p
-        class="leftCard__detail"
-      >
-        Kathryn Scola
-      </p>
-       
-    </div>
+      Alice Faye
+    </p>
+    <p
+      class="leftCard__detail"
+    >
+      Don Ameche
+    </p>
   </div>
-</DocumentFragment>
+  <div
+    class="leftCard__content"
+  >
+    <p
+      class="detail-highlight"
+    >
+      Director
+    </p>
+    <p
+      class="leftCard__detail"
+    >
+      Henry King
+    </p>
+  </div>
+  <div
+    class="leftCard__content"
+  >
+    <p
+      class="detail-highlight"
+    >
+      Writer
+      
+    </p>
+    <p
+      class="leftCard__detail"
+    >
+      Kathryn Scola
+    </p>
+     
+  </div>
+</div>
 `;

@@ -1,12 +1,11 @@
 import React from 'react'
-import { render, cleanup } from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react'
 
 import Search from '../Search'
 
-afterEach(cleanup);
+afterEach(cleanup)
 
-it("renders", () => {
-  const { asFragment } = render(<Search/>);
-  expect(asFragment()).toMatchSnapshot();
-});
-
+test('<Search />', () => {
+	const { container, debug, getByText } = render(<Search />)
+	expect(container.firstChild).toMatchSnapshot()
+})

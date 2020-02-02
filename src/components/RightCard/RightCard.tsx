@@ -15,7 +15,9 @@ const RightCard: React.FC<RightCardInputProps> = ({ movie }) => (
 			<ul>
 				{movie.locations.map((loc: any, index: number) => (
 					<li className="rightCard__detail" key={index}>
-						<div>{ index + 1 }. { loc }</div>
+						<div>
+							{index + 1}. {loc}
+						</div>
 					</li>
 				))}
 			</ul>
