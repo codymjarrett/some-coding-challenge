@@ -2,7 +2,7 @@
 
 Approach this as you would a new project at work; consider the _organization_, _design_, and _test coverage_ of your code. You should also think about aspects such as API _error handling_ or _unexpected responses_.
 
-You should only spend a few hours on this challenge; we are more interested in how you approach a problem than all the bells and whistles. Once completed, please push the code to this repository and then email <ssteward@rewardsnetwork.com> that you have finished. We expect the completed challenge returned no more than 5 business days from when we send it out.
+You should only spend a few hours on this challenge; we are more interested in how you approach a problem than all the bells and whistles. 
 
 ## Problem
 
